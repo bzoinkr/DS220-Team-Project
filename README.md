@@ -10,4 +10,4 @@ Project Manager:
 
 Dev Lead:
 
-Dev(s): Tanush
+Dev(s): Tanush, Diego Merino
