@@ -8,6 +8,6 @@ Analyst/ Designer:
 
 Project Manager:
 
-Dev Lead:
+Dev Lead: Daiwik Kashyap
 
 Dev(s): Tanush, Diego Merino
