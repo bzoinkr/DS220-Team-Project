@@ -25,9 +25,9 @@ Create Table Personal Account (
 );
 
 Create Table Advertisements Page (
-    Bounce_Rate         int,
-    Click_Through_Rate  varchar(20),
-    Conversion_Rate     varchar(20)
+    Bounce_Rate         decimal(2,2),
+    Click_Through_Rate  decimal(3,2),
+    Conversion_Rate     decimal(3,2)
 );
 
 Create Table Page (
