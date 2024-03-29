@@ -1,0 +1,50 @@
+1. 
+English: Jonathen chooses to sign up on FacePage with a unique username 'MicrosoftBusiness' filling in all the required personal information 
+for a business account. His ID is '4444', his email is 'jonathen4@gmail.com', and his date of birth is '04/14/1994'. His company is
+called 'Microsoft' and must pay a monthly fee of $15. Jonathen does not have an existing personal account so this will be his first account 
+on FacePage. After signing up on FacePage, Jonathen chooses to create an advertisement page for the company. Based off the advertisement page, 
+Jonathen records that 88% of users leave the page immediately, 7%  of users click on a banner on the advertisement page, and 2% of users 
+make a purchase.
+
+SQL: 
+
+2. 
+English: Timothy chooses to sign up on FacePage with a unique username 'AppleBusiness' filling in all the required personal information for
+a business account. His ID is '1234', his email is 'timothy4@gmail.com', and his date of birth is '06/16/1996'. His company is called 'Apple'
+and must pay a monthly fee of $10. Timothy does not have an existing personal account so this will be his first account on FacePage. Timothy
+chooses not to create an advertisemenet page. 
+
+
+SQL: 
+
+
+3. 
+English: Alex chooses to sign up on FacePage with a unique username 'AlexPersonal' filling in all the required personal information for 
+a personal account. His ID is '1000', his email is 'alex8@gmail.com', and his date of birth is '01/11/1991'. When looking at his page visits,
+he records that 63 people have viewed it.
+
+SQL: 
+
+4. 
+English: Sarah chooses to sign up on FacePage with a unique username 'SarahPersonal' filling in all the required personal information for 
+a personal account. Her ID is '7900', her email is 'sarah8@gmail.com', and her date of birth is '07/17/1997'. When looking at her page visits,
+she records that 27 people have viewed it.
+
+SQL: 
+
+5. 
+English: Holly chooses to sign up on FacePage with a unique username 'DellBusiness' filling in all the required personal information 
+for a business account. Her ID is '9000', her email is 'holly4@gmail.com', and her date of birth is '09/19/1999'. Her company is
+called 'Dell' and must pay a monthly fee of $20. Holly does not have an existing personal account so this will be her first account 
+on FacePage. After signing up on FacePage, Holly chooses to create an advertisement page for the company. Based off the advertisement page, 
+Holly records that 67% of users leave the page immediately, 11% of users click on a banner on the advertisement page, and 4% of users 
+make a purchase.
+
+SQL: 
+
+6. 
+English: Steve chooses to sign up on FacePage with a unique username 'StevePersonal' filling in all the required personal information for 
+a personal account. His ID is '3000', his email is 'alex8@gmail.com', and his date of birth is '03/13/1993'. When looking at his page visits,
+he records that 99 people have viewed it.
+
+SQL: 
