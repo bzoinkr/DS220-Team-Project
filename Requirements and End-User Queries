@@ -1,6 +1,6 @@
 Data Requirements:
 To create an account with FacePage, the user must choose a unique username that is not already existing. If a business account is chosen, the user 
-must list a company name and pay a monthly fee.
+must list a company name and pay a monthly fee. If a personal account is chosen, 
 
 1. 
 English: Jonathen chooses to sign up on FacePage with a unique username 'MicrosoftBusiness' filling in all the required personal information 
@@ -24,15 +24,16 @@ SQL:
 
 3. 
 English: Alex chooses to sign up on FacePage with a unique username 'AlexPersonal' filling in all the required personal information for 
-a personal account. His ID is '1000', his email is 'alex8@gmail.com', and his date of birth is '01/11/1991'. When looking at his page visits,
-he records that 63 people have viewed it.
+a personal account. His ID is '1000', his email is 'alex8@gmail.com', and his date of birth is '01/11/1991'. Alex chooses to make 2
+pages, 'MyFirstPage' and 'MySecondPage'. When looking at his 'MyFirstPage' visits, he records that 63 people have viewed it. When looking at his
+'MySecondPage' visits, he records that 42 people have viewed it.
 
 SQL: 
 
 4. 
 English: Sarah chooses to sign up on FacePage with a unique username 'SarahPersonal' filling in all the required personal information for 
-a personal account. Her ID is '7900', her email is 'sarah8@gmail.com', and her date of birth is '07/17/1997'. When looking at her page visits,
-she records that 27 people have viewed it.
+a personal account. Her ID is '7900', her email is 'sarah8@gmail.com', and her date of birth is '07/17/1997'. Sarah chooses to make 1
+page, 'SarahPage. When looking at her 'SarahPage' visits, she records that 103 people have viewed it.
 
 SQL: 
 
@@ -48,7 +49,8 @@ SQL:
 
 6. 
 English: Steve chooses to sign up on FacePage with a unique username 'StevePersonal' filling in all the required personal information for 
-a personal account. His ID is '3000', his email is 'alex8@gmail.com', and his date of birth is '03/13/1993'. When looking at his page visits,
-he records that 99 people have viewed it.
+a personal account. His ID is '3000', his email is 'alex8@gmail.com', and his date of birth is '03/13/1993'. Steve chooses to make 3
+pages, 'First' 'Second', and 'Third'. When looking at his 'First' visits, he records that 200 people have viewed it. When looking at his
+'Second' visits, he records that 87 people have viewed it. When looking at his 'Third' visits, he records that 154 people have viewed it.
 
 SQL: 
