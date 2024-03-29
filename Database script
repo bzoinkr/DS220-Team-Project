@@ -1,6 +1,6 @@
 Create Table User (
     Id                  int Unique,
-    Name                varchar(50) Not Null,
+    Name                char(50) Not Null,
     Date_of_Birth       varchar(50),
     Email               varchar(50) Not Null,
     Primary Key (Id)
