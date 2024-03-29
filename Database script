@@ -1,1 +1,30 @@
+Create Table User (
+    Id              int,
+    Name            varchar(50),
+    Date of Birth   varchar(50),
+    Email           varchar(50)
+    Primary Key (Id)
+);
 
+Create Table Account (
+    Account Number  int,
+    Account Type    varchar(50),
+    Primary Key(Account Number)
+);
+
+Create Table Business Account (
+    Company Name    varchar(50),
+    Monthly Fee     int
+);
+
+Create Table Personal Account (
+    Id              int,
+    Name            varchar(50),
+    Date of Birth   varchar(50),
+    Email           varchar(50)
+);
+
+Create Table Advertisements Page (
+    Bounce Rate
+    Click Through Rate
+    Conversion Rate   
