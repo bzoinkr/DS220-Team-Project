@@ -2,7 +2,7 @@ Create Table User (
     Id                  int,
     Name                varchar(50),
     Date of Birth       varchar(50),
-    Email               varchar(50)
+    Email               varchar(50),
     Primary Key (Id)
 );
 
@@ -32,5 +32,5 @@ Create Table Advertisements Page (
 
 Create Table Page (
     Page Name           varchar(50),
-    Number of visits    int
+    Number of Visits    int
 );
