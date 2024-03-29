@@ -1,36 +1,36 @@
 Create Table User (
-    Id                  int,
-    Name                varchar(50),
-    Date of Birth       varchar(50),
-    Email               varchar(50),
+    Id                  int Unique,
+    Name                varchar(50) Not Null,
+    Date_of_Birth       varchar(50),
+    Email               varchar(50) Not Null,
     Primary Key (Id)
 );
 
 Create Table Account (
-    Account Number      int,
-    Account Type        varchar(50),
+    Account_Number      int Unique,
+    Account_Type        varchar(50) Not Null,
     Primary Key(Account Number)
 );
 
 Create Table Business Account (
-    Company Name        varchar(50),
-    Monthly Fee         decimal(4,2)
+    Company_Name        varchar(50),
+    Monthly_Fee         decimal(4,2)
 );
 
 Create Table Personal Account (
-    Id                  int,
-    Name                varchar(50),
-    Date of Birth       varchar(50),
-    Email               varchar(50)
+    Id                  int Unique,
+    Name                varchar(50) Not Null,
+    Date_of_Birth       varchar(50),
+    Email               varchar(50) Not Null
 );
 
 Create Table Advertisements Page (
-    Bounce Rate         int,
-    Click Through Rate  varchar(20),
-    Conversion Rate     varchar(20)
+    Bounce_Rate         int,
+    Click_Through_Rate  varchar(20),
+    Conversion_Rate     varchar(20)
 );
 
 Create Table Page (
-    Page Name           varchar(50),
-    Number of Visits    int
+    Page_Name           varchar(50),
+    Number_of_Visits    int
 );
