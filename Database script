@@ -10,6 +10,7 @@ Create Table Account (
     Account_Number      int Unique,
     Account_Type        varchar(50) Not Null,
     Primary Key(Account Number)
+    Foreign Key(Account_Number) References User(Id)
 );
 
 Create Table Business Account (
