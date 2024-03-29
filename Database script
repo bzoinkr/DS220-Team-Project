@@ -14,7 +14,7 @@ Create Table Account (
 
 Create Table Business Account (
     Company Name        varchar(50),
-    Monthly Fee         int
+    Monthly Fee         decimal(4,2)
 );
 
 Create Table Personal Account (
