@@ -1,6 +1,9 @@
 Data Requirements:
-To create an account with FacePage, the user must choose a unique username that is not already existing. If a business account is chosen, the user 
-must list a company name and pay a monthly fee. If a personal account is chosen, 
+To create an account with FacePage, the user must choose a unique username that is not already existing for either a personal or business account.
+If a business account is chosen, the user must list a company name and pay a monthly fee. Business accounts have the option to create an 
+advertisement page, but it is not required. If a personal account is chosen, they may send/receive friend requests, unlike business accounts.
+Both business and personal accounts are not allowed to create multiple accounts, but they are allowed to create multiple pages. These pages are not 
+allowed to have the same name under an account.
 
 1. 
 English: Jonathen chooses to sign up on FacePage with a unique username 'MicrosoftBusiness' filling in all the required personal information 
