@@ -31,6 +31,6 @@ Create Table Advertisements Page (
 );
 
 Create Table Page (
-    Page_Name           varchar(50),
+    Page_Name           varchar(50) Unique,
     Number_of_Visits    int
 );
