@@ -14,7 +14,7 @@ Create Table Account (
 );
 
 Create Table Business Account (
-    Company_Name        varchar(50),
+    Company_Name        varchar(50) Not Null,
     Monthly_Fee         decimal(4,2)
 );
 
