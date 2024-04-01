@@ -1,5 +1,5 @@
 Create Table User (
-    Id                  int Unique,
+    Id                  int,
     Name                char(50) Not Null,
     Date_of_Birth       varchar(50),
     Email               varchar(50) Not Null,
@@ -7,7 +7,7 @@ Create Table User (
 );
 
 Create Table Account (
-    Account_Number      int Unique,
+    Account_Number      int,
     Account_Type        varchar(50) Not Null,
     Primary Key(Account Number)
     Foreign Key(Account_Number) References User(Id)
