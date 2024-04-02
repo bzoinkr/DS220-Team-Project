@@ -7,15 +7,14 @@ Create Table User (
 );
 
 Create Table Account (
-    User_id             int Not Null,
-    Account_Number      int,
+    User_id             int Not Null AUTO_INCREMENT,
+    Account_Number      int AUTO_INCREMENT,
     Account_Type        varchar(50) Not Null,
     Primary Key (Account_Number)
-    Foreign Key (User_id) References User(Id)
 );
 
 Create Table Business_Account (
-    Account_Number      int,
+    Account_Number      int AUTO_INCREMENT,
     Company_Name        varchar(50) Not Null,
     Monthly_Fee         decimal(4,2),
     Primary Key (Account_Number)
@@ -23,7 +22,7 @@ Create Table Business_Account (
 );
 
 Create Table Personal_Account (
-    Account_Number      int,
+    Account_Number      int AUTO_INCREMENT,
     Id                  int Unique,
     Name                varchar(50) Not Null,
     Date_of_Birth       varchar(50),
@@ -33,8 +32,8 @@ Create Table Personal_Account (
 );
 
 Create Table Page (
-    Page_id             int,
-    Account_Number      int Not Null,
+    Page_id             int AUTO_INCREMENT,
+    Account_Number      int Not Null AUTO_INCREMENT,
     Page_Name           varchar(50) Unique,
     Number_of_Visits    int,
     Primary Key (Page_id)
@@ -42,7 +41,7 @@ Create Table Page (
 );
 
 Create Table Advertisements_Page (
-    Page_id             int,
+    Page_id             int AUTO_INCREMENT,
     Bounce_Rate         decimal(3,2),
     Click_Through_Rate  decimal(3,2),
     Conversion_Rate     decimal(3,2),
