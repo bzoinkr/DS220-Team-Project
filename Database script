@@ -1,5 +1,5 @@
 Create Table User (
-    Id                  int,
+    Id                  int Unique,
     Name                char(50) Not Null,
     Date_of_Birth       varchar(50),
     Email               varchar(50) Not Null,
