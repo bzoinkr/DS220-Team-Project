@@ -26,7 +26,7 @@ Create Table Personal_Account (
     Id                  int Unique,
     Name                varchar(50) Not Null,
     Date_of_Birth       varchar(50),
-    Email               varchar(50) Not Null,,
+    Email               varchar(50) Not Null,
     Primary Key (Account_Number)
     Foreign Key (Account_Number) References Account(Account_Number)
 );
