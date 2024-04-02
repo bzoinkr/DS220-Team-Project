@@ -38,7 +38,12 @@ English: Sarah chooses to sign up on FacePage with a unique username 'SarahPerso
 a personal account. Her ID is '7900', her email is 'sarah8@gmail.com', and her date of birth is '07/17/1997'. Sarah chooses to make 1
 page, 'SarahPage. When looking at her 'SarahPage' visits, she records that 103 people have viewed it.
 
-SQL: 
+SQL:
+INSERT INTO User (Id, Name, Date_of_Birth, Email) VALUES (7900, 'Sarah', '1997-07-17', 'sarah8@gmail.com');
+INSERT INTO Account (UserId, Account_Type) VALUES (7900, 'Personal');
+INSERT INTO Personal_Account (Account_Number) VALUES ((SELECT Account_Number FROM Account WHERE UserId = 7900));
+INSERT INTO Page (Account_Number, Page_Name, Number_of_Visits) VALUES ((SELECT Account_Number FROM Personal_Account WHERE Account_Number = (SELECT Account_Number FROM Account WHERE UserId = 7900)), 'SarahPage', 103);
+
 
 5. 
 English: Holly chooses to sign up on FacePage with a unique username 'DellBusiness' filling in all the required personal information 
@@ -48,7 +53,13 @@ on FacePage. After signing up on FacePage, Holly chooses to create an advertisem
 Holly records that 67% of users leave the page immediately, 11% of users click on a banner on the advertisement page, and 4% of users 
 make a purchase.
 
-SQL: 
+SQL:
+INSERT INTO User (Id, Name, Date_of_Birth, Email) VALUES (9000, 'Holly', '1999-09-19', 'holly4@gmail.com');
+INSERT INTO Account (UserId, Account_Type) VALUES (9000, 'Business');
+INSERT INTO Business_Account (Account_Number, Company_Name, Monthly_Fee) VALUES ((SELECT Account_Number FROM Account WHERE UserId = 9000), 'Dell', 20);
+INSERT INTO Page (Account_Number, Page_Name) VALUES ((SELECT Account_Number FROM Business_Account WHERE Company_Name = 'Dell'), 'Dell Advertisement');
+INSERT INTO Advertisements_Page (Page_Id, Bounce_Rate, Click_Through_Rate, Conversion_Rate) VALUES ((SELECT Page_Id FROM Page WHERE Page_Name = 'Dell Advertisement'), 0.67, 0.11, 0.04);
+
 
 6. 
 English: Steve chooses to sign up on FacePage with a unique username 'StevePersonal' filling in all the required personal information for 
@@ -56,4 +67,10 @@ a personal account. His ID is '3000', his email is 'alex8@gmail.com', and his da
 pages, 'First' 'Second', and 'Third'. When looking at his 'First' visits, he records that 200 people have viewed it. When looking at his
 'Second' visits, he records that 87 people have viewed it. When looking at his 'Third' visits, he records that 154 people have viewed it.
 
-SQL: 
+SQL:
+INSERT INTO User (Id, Name, Date_of_Birth, Email) VALUES (9000, 'Holly', '1999-09-19', 'holly4@gmail.com');
+INSERT INTO Account (UserId, Account_Type) VALUES (9000, 'Business');
+INSERT INTO Business_Account (Account_Number, Company_Name, Monthly_Fee) VALUES ((SELECT Account_Number FROM Account WHERE UserId = 9000), 'Dell', 20);
+INSERT INTO Page (Account_Number, Page_Name) VALUES ((SELECT Account_Number FROM Business_Account WHERE Company_Name = 'Dell'), 'Dell Advertisement');
+INSERT INTO Advertisements_Page (Page_Id, Bounce_Rate, Click_Through_Rate, Conversion_Rate) VALUES ((SELECT Page_Id FROM Page WHERE Page_Name = 'Dell Advertisement'), 0.67, 0.11, 0.04);
+
