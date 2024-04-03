@@ -54,7 +54,7 @@ INSERT INTO Business_Account (Account_Number, Company_Name, Monthly_Fee)
 VALUES 
 ((SELECT Account_Number FROM Account WHERE User_Id = 1234), 'Apple', 10.00);
 
-NSERT INTO Page (Account_Number, Page_Name, Number_of_Visits) 
+INSERT INTO Page (Account_Number, Page_Name, Number_of_Visits) 
 VALUES
 ((SELECT Account_Number FROM Business_Account WHERE Company_Name = 'Apple'), 'Apple Tutorial', 142);
 
