@@ -7,7 +7,7 @@ Create Table UserTable (
 );
 
 Create Table Account (
-    User_id             SERIAL NOT NULL,
+    User_Id             SERIAL NOT NULL,
     Account_Number      SERIAL,
     Account_Type        varchar(50) Not Null,
     Primary Key (Account_Number)
@@ -32,20 +32,20 @@ Create Table Personal_Account (
 );
 
 Create Table Page (
-    Page_id             SERIAL,
+    Page_Id             SERIAL,
     Account_Number      SERIAL NOT NULL,
     Page_Name           varchar(50) Unique,
     Number_of_Visits    int,
-    Primary Key (Page_id),
+    Primary Key (Page_Id),
     Foreign Key (Account_Number) References Account(Account_Number)
 );
 
 Create Table Advertisements_Page (
-    Page_id             SERIAL,
+    Page_Id             SERIAL,
     Bounce_Rate         decimal(3,2),
     Click_Through_Rate  decimal(3,2),
     Conversion_Rate     decimal(3,2),
-    Primary Key (Page_id),
-    Foreign Key (Page_id) References Page(Page_id)
+    Primary Key (Page_Id),
+    Foreign Key (Page_Id) References Page(Page_Id)
 );
 
