@@ -18,13 +18,13 @@ INSERT INTO UserTable (Id, Name, Date_of_Birth, Email)
 VALUES
 (4444, 'MicrosoftBusiness', '1994-04-14', 'jonathen4@gmail.com');
 
-INSERT INTO Account (UserId, Account_Type) 
+INSERT INTO Account (User_Id, Account_Type) 
 VALUES 
 (4444, 'Business');
 
 INSERT INTO Business_Account (Account_Number, Company_Name, Monthly_Fee) 
 VALUES 
-((SELECT Account_Number FROM Account WHERE UserId = 4444), 'Microsoft', 15.00);
+((SELECT Account_Number FROM Account WHERE User_Id = 4444), 'Microsoft', 15.00);
 
 INSERT INTO Page (Account_Number, Page_Name) 
 VALUES
@@ -46,13 +46,13 @@ INSERT INTO UserTable (Id, Name, Date_of_Birth, Email)
 VALUES
 (1234, 'AppleBusiness', '1996-06-16', 'timothy4@gmail.com');
 
-INSERT INTO Account (UserId, Account_Type) 
+INSERT INTO Account (User_Id, Account_Type) 
 VALUES 
 (1234, 'Business');
 
 INSERT INTO Business_Account (Account_Number, Company_Name, Monthly_Fee) 
 VALUES 
-((SELECT Account_Number FROM Account WHERE UserId = 1234), 'Apple', 10.00);
+((SELECT Account_Number FROM Account WHERE User_Id = 1234), 'Apple', 10.00);
 
 3. 
 English: Alex chooses to sign up on FacePage with a unique username 'AlexPersonal' filling in all the required personal information for 
@@ -65,18 +65,18 @@ INSERT INTO UserTable (Id, Name, Date_of_Birth, Email)
 VALUES
 (1000, 'AlexBusiness', '1991-01-11', 'alex8@gmail.com');
 
-INSERT INTO Account (UserId, Account_Type) 
+INSERT INTO Account (User_Id, Account_Type) 
 VALUES 
 (1000, 'Personal');
 
 INSERT INTO Personal_Account (Account_Number)
 VALUES
-((SELECT Account_Number FROM Account WHERE UserId = 1000));
+((SELECT Account_Number FROM Account WHERE User_Id = 1000));
 
 INSERT INTO Page (Account_Number, Page_Name, Number_of_Visits) 
 VALUES 
-((SELECT Account_Number FROM Personal_Account WHERE Account_Number = (SELECT Account_Number FROM Account WHERE UserId = 1000)), 'MyFirstPage', 63),
-((SELECT Account_Number FROM Personal_Account WHERE Account_Number = (SELECT Account_Number FROM Account WHERE UserId = 1000)), 'MySecondPage', 42);
+((SELECT Account_Number FROM Personal_Account WHERE Account_Number = (SELECT Account_Number FROM Account WHERE User_Id = 1000)), 'MyFirstPage', 63),
+((SELECT Account_Number FROM Personal_Account WHERE Account_Number = (SELECT Account_Number FROM Account WHERE User_Id = 1000)), 'MySecondPage', 42);
 
 4. 
 English: Sarah chooses to sign up on FacePage with a unique username 'SarahPersonal' filling in all the required personal information for 
@@ -85,9 +85,9 @@ page, 'SarahPage. When looking at her 'SarahPage' visits, she records that 103 p
 
 SQL:
 INSERT INTO UserTable (Id, Name, Date_of_Birth, Email) VALUES (7900, 'SarahPersonal', '1997-07-17', 'sarah8@gmail.com');
-INSERT INTO Account (UserId, Account_Type) VALUES (7900, 'Personal');
-INSERT INTO Personal_Account (Account_Number) VALUES ((SELECT Account_Number FROM Account WHERE UserId = 7900));
-INSERT INTO Page (Account_Number, Page_Name, Number_of_Visits) VALUES ((SELECT Account_Number FROM Personal_Account WHERE Account_Number = (SELECT Account_Number FROM Account WHERE UserId = 7900)), 'SarahPage', 103);
+INSERT INTO Account (User_Id, Account_Type) VALUES (7900, 'Personal');
+INSERT INTO Personal_Account (Account_Number) VALUES ((SELECT Account_Number FROM Account WHERE User_Id = 7900));
+INSERT INTO Page (Account_Number, Page_Name, Number_of_Visits) VALUES ((SELECT Account_Number FROM Personal_Account WHERE Account_Number = (SELECT Account_Number FROM Account WHERE User_Id = 7900)), 'SarahPage', 103);
 
 
 5. 
@@ -100,8 +100,8 @@ make a purchase.
 
 SQL:
 INSERT INTO UserTable (Id, Name, Date_of_Birth, Email) VALUES (9000, 'DellBusiness', '1999-09-19', 'holly4@gmail.com');
-INSERT INTO Account (UserId, Account_Type) VALUES (9000, 'Business');
-INSERT INTO Business_Account (Account_Number, Company_Name, Monthly_Fee) VALUES ((SELECT Account_Number FROM Account WHERE UserId = 9000), 'Dell', 20.00);
+INSERT INTO Account (User_Id, Account_Type) VALUES (9000, 'Business');
+INSERT INTO Business_Account (Account_Number, Company_Name, Monthly_Fee) VALUES ((SELECT Account_Number FROM Account WHERE User_Id = 9000), 'Dell', 20.00);
 INSERT INTO Page (Account_Number, Page_Name) VALUES ((SELECT Account_Number FROM Business_Account WHERE Company_Name = 'Dell'), 'Dell Advertisement');
 INSERT INTO Advertisements_Page (Page_Id, Bounce_Rate, Click_Through_Rate, Conversion_Rate) VALUES ((SELECT Page_Id FROM Page WHERE Page_Name = 'Dell Advertisement'), 0.67, 0.11, 0.04);
 
@@ -114,10 +114,10 @@ pages, 'First' 'Second', and 'Third'. When looking at his 'First' visits, he rec
 
 SQL:
 INSERT INTO UserTable (Id, Name, Date_of_Birth, Email) VALUES (3000, 'StevePersonal', '1993-03-13', 'steve8@gmail.com');
-INSERT INTO Account (UserId, Account_Type) VALUES (3000, 'Personal');
-INSERT INTO Personal_Account (Account_Number) VALUES ((SELECT Account_Number FROM Account WHERE UserId = 3000));
+INSERT INTO Account (User_Id, Account_Type) VALUES (3000, 'Personal');
+INSERT INTO Personal_Account (Account_Number) VALUES ((SELECT Account_Number FROM Account WHERE User_Id = 3000));
 INSERT INTO Page (Account_Number, Page_Name, Number_of_Visits) 
 VALUES 
-((SELECT Account_Number FROM Personal_Account WHERE Account_Number = (SELECT Account_Number FROM Account WHERE UserId = 3000)), 'First', 200),
-((SELECT Account_Number FROM Personal_Account WHERE Account_Number = (SELECT Account_Number FROM Account WHERE UserId = 3000)), 'Second', 87),
-((SELECT Account_Number FROM Personal_Account WHERE Account_Number = (SELECT Account_Number FROM Account WHERE UserId = 3000)), 'Third', 154);
+((SELECT Account_Number FROM Personal_Account WHERE Account_Number = (SELECT Account_Number FROM Account WHERE User_Id = 3000)), 'First', 200),
+((SELECT Account_Number FROM Personal_Account WHERE Account_Number = (SELECT Account_Number FROM Account WHERE User_Id = 3000)), 'Second', 87),
+((SELECT Account_Number FROM Personal_Account WHERE Account_Number = (SELECT Account_Number FROM Account WHERE User_Id = 3000)), 'Third', 154);
