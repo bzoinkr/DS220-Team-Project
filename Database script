@@ -1,4 +1,4 @@
-Create Table User (
+Create Table UserTable (
     Id                  int Unique,
     Name                varchar(50) Not Null,
     Date_of_Birth       varchar(50),
