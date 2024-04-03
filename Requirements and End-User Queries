@@ -14,7 +14,7 @@ Jonathen records that 88% of users leave the page immediately, 7%  of users clic
 make a purchase.
 
 SQL: 
-INSERT INTO USER (Id, Name, Date_of_Birth, Email)
+INSERT INTO UserTable (Id, Name, Date_of_Birth, Email)
 VALUES
 (4444, 'MicrosoftBusiness', '1994-04-14', 'jonathen4@gmail.com');
 
@@ -42,7 +42,7 @@ chooses not to create an advertisemenet page.
 
 
 SQL: 
-INSERT INTO USER (Id, Name, Date_of_Birth, Email)
+INSERT INTO UserTable (Id, Name, Date_of_Birth, Email)
 VALUES
 (1234, 'AppleBusiness', '1996-06-16', 'timothy4@gmail.com');
 
@@ -61,7 +61,7 @@ pages, 'MyFirstPage' and 'MySecondPage'. When looking at his 'MyFirstPage' visit
 'MySecondPage' visits, he records that 42 people have viewed it.
 
 SQL: 
-INSERT INTO USER (Id, Name, Date_of_Birth, Email)
+INSERT INTO UserTable (Id, Name, Date_of_Birth, Email)
 VALUES
 (1000, 'AlexBusiness', '1991-01-11', 'alex8@gmail.com');
 
@@ -84,7 +84,7 @@ a personal account. Her ID is '7900', her email is 'sarah8@gmail.com', and her d
 page, 'SarahPage. When looking at her 'SarahPage' visits, she records that 103 people have viewed it.
 
 SQL:
-INSERT INTO User (Id, Name, Date_of_Birth, Email) VALUES (7900, 'SarahPersonal', '1997-07-17', 'sarah8@gmail.com');
+INSERT INTO UserTable (Id, Name, Date_of_Birth, Email) VALUES (7900, 'SarahPersonal', '1997-07-17', 'sarah8@gmail.com');
 INSERT INTO Account (UserId, Account_Type) VALUES (7900, 'Personal');
 INSERT INTO Personal_Account (Account_Number) VALUES ((SELECT Account_Number FROM Account WHERE UserId = 7900));
 INSERT INTO Page (Account_Number, Page_Name, Number_of_Visits) VALUES ((SELECT Account_Number FROM Personal_Account WHERE Account_Number = (SELECT Account_Number FROM Account WHERE UserId = 7900)), 'SarahPage', 103);
@@ -99,7 +99,7 @@ Holly records that 67% of users leave the page immediately, 11% of users click o
 make a purchase.
 
 SQL:
-INSERT INTO User (Id, Name, Date_of_Birth, Email) VALUES (9000, 'DellBusiness', '1999-09-19', 'holly4@gmail.com');
+INSERT INTO UserTable (Id, Name, Date_of_Birth, Email) VALUES (9000, 'DellBusiness', '1999-09-19', 'holly4@gmail.com');
 INSERT INTO Account (UserId, Account_Type) VALUES (9000, 'Business');
 INSERT INTO Business_Account (Account_Number, Company_Name, Monthly_Fee) VALUES ((SELECT Account_Number FROM Account WHERE UserId = 9000), 'Dell', 20.00);
 INSERT INTO Page (Account_Number, Page_Name) VALUES ((SELECT Account_Number FROM Business_Account WHERE Company_Name = 'Dell'), 'Dell Advertisement');
@@ -113,7 +113,7 @@ pages, 'First' 'Second', and 'Third'. When looking at his 'First' visits, he rec
 'Second' visits, he records that 87 people have viewed it. When looking at his 'Third' visits, he records that 154 people have viewed it.
 
 SQL:
-INSERT INTO User (Id, Name, Date_of_Birth, Email) VALUES (3000, 'StevePersonal', '1993-03-13', 'steve8@gmail.com');
+INSERT INTO UserTable (Id, Name, Date_of_Birth, Email) VALUES (3000, 'StevePersonal', '1993-03-13', 'steve8@gmail.com');
 INSERT INTO Account (UserId, Account_Type) VALUES (3000, 'Personal');
 INSERT INTO Personal_Account (Account_Number) VALUES ((SELECT Account_Number FROM Account WHERE UserId = 3000));
 INSERT INTO Page (Account_Number, Page_Name, Number_of_Visits) 
