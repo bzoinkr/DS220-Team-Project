@@ -9,9 +9,9 @@ allowed to have the same name under an account.
 English: Jonathen chooses to sign up on FacePage with a unique username 'MicrosoftBusiness' filling in all the required personal information 
 for a business account. His ID is '4444', his email is 'jonathen4@gmail.com', and his date of birth is '04/14/1994'. His company is
 called 'Microsoft' and must pay a monthly fee of $15. Jonathen does not have an existing personal account so this will be his first account 
-on FacePage. After signing up on FacePage, Jonathen chooses to create an advertisement page for the company. Based off the advertisement page, 
-Jonathen records that 88% of users leave the page immediately, 7%  of users click on a banner on the advertisement page, and 2% of users 
-make a purchase.
+on FacePage. Eventually, Jonathen chooses to create an advertisement page for the company. Based off the advertisement page, Jonathen records 
+that out of the 602 users who visited the advertisement page, 88% of users leave the page immediately, 7%  of users click on a banner on the 
+advertisement page, and 2% of users make a purchase.
 
 SQL: 
 INSERT INTO UserTable (Id, Name, Date_of_Birth, Email)
@@ -26,9 +26,9 @@ INSERT INTO Business_Account (Account_Number, Company_Name, Monthly_Fee)
 VALUES 
 ((SELECT Account_Number FROM Account WHERE User_Id = 4444), 'Microsoft', 15.00);
 
-INSERT INTO Page (Account_Number, Page_Name) 
+INSERT INTO Page (Account_Number, Page_Name, Number_of_Visits) 
 VALUES
-((SELECT Account_Number FROM Business_Account WHERE Company_Name = 'Microsoft'), 'Microsoft Advertisement');
+((SELECT Account_Number FROM Business_Account WHERE Company_Name = 'Microsoft'), 'Microsoft Advertisement', 602);
 
 INSERT INTO Advertisements_Page(Page_Id, Bounce_Rate, Click_Through_Rate, Conversion_Rate)
 VALUES
@@ -38,7 +38,7 @@ VALUES
 English: Timothy chooses to sign up on FacePage with a unique username 'AppleBusiness' filling in all the required personal information for
 a business account. His ID is '1234', his email is 'timothy4@gmail.com', and his date of birth is '06/16/1996'. His company is called 'Apple'
 and must pay a monthly fee of $10. Timothy does not have an existing personal account so this will be his first account on FacePage. Timothy
-chooses not to create an advertisemenet page. 
+chooses not to create an advertisemenet page and has allocated 142 visits on one of their pages called 'Apple Tutorial'.
 
 
 SQL: 
@@ -53,6 +53,10 @@ VALUES
 INSERT INTO Business_Account (Account_Number, Company_Name, Monthly_Fee) 
 VALUES 
 ((SELECT Account_Number FROM Account WHERE User_Id = 1234), 'Apple', 10.00);
+
+NSERT INTO Page (Account_Number, Page_Name, Number_of_Visits) 
+VALUES
+((SELECT Account_Number FROM Business_Account WHERE Company_Name = 'Apple'), 'Apple Tutorial', 142);
 
 3. 
 English: Alex chooses to sign up on FacePage with a unique username 'AlexPersonal' filling in all the required personal information for 
@@ -95,14 +99,14 @@ English: Holly chooses to sign up on FacePage with a unique username 'DellBusine
 for a business account. Her ID is '9000', her email is 'holly4@gmail.com', and her date of birth is '09/19/1999'. Her company is
 called 'Dell' and must pay a monthly fee of $20. Holly does not have an existing personal account so this will be her first account 
 on FacePage. After signing up on FacePage, Holly chooses to create an advertisement page for the company. Based off the advertisement page, 
-Holly records that 67% of users leave the page immediately, 11% of users click on a banner on the advertisement page, and 4% of users 
+Out of the 752 people who visited the page, Holly records that 67% of users leave the page immediately, 11% of users click on a banner on the advertisement page, and 4% of users 
 make a purchase.
 
 SQL:
 INSERT INTO UserTable (Id, Name, Date_of_Birth, Email) VALUES (9000, 'DellBusiness', '1999-09-19', 'holly4@gmail.com');
 INSERT INTO Account (User_Id, Account_Type) VALUES (9000, 'Business');
 INSERT INTO Business_Account (Account_Number, Company_Name, Monthly_Fee) VALUES ((SELECT Account_Number FROM Account WHERE User_Id = 9000), 'Dell', 20.00);
-INSERT INTO Page (Account_Number, Page_Name) VALUES ((SELECT Account_Number FROM Business_Account WHERE Company_Name = 'Dell'), 'Dell Advertisement');
+INSERT INTO Page (Account_Number, Page_Name, Number_of_Visits) VALUES ((SELECT Account_Number FROM Business_Account WHERE Company_Name = 'Dell'), 'Dell Advertisement', 752);
 INSERT INTO Advertisements_Page (Page_Id, Bounce_Rate, Click_Through_Rate, Conversion_Rate) VALUES ((SELECT Page_Id FROM Page WHERE Page_Name = 'Dell Advertisement'), 0.67, 0.11, 0.04);
 
 
