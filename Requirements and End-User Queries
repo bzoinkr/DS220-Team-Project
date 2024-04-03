@@ -73,9 +73,13 @@ INSERT INTO Account (User_Id, Account_Type)
 VALUES 
 (1000, 'Personal');
 
-INSERT INTO Personal_Account (Account_Number)
+INSERT INTO Personal_Account (Account_Number, Id, Name, Date_of_Birth, Email)
 VALUES
-((SELECT Account_Number FROM Account WHERE User_Id = 1000));
+((SELECT Account_Number FROM Account WHERE User_Id = 1000), 
+(SELECT Id FROM UserTable WHERE Id = 1000),
+(SELECT Name FROM UserTable where Id = 1000),
+(SELECT Date_of_Birth FROM UserTable WHERE Id = 1000),
+(SELECT Email FROM UserTable WHERE Id = 1000));
 
 INSERT INTO Page (Account_Number, Page_Name, Number_of_Visits) 
 VALUES 
@@ -90,7 +94,14 @@ page, 'SarahPage. When looking at her 'SarahPage' visits, she records that 103 p
 SQL:
 INSERT INTO UserTable (Id, Name, Date_of_Birth, Email) VALUES (7900, 'SarahPersonal', '1997-07-17', 'sarah8@gmail.com');
 INSERT INTO Account (User_Id, Account_Type) VALUES (7900, 'Personal');
-INSERT INTO Personal_Account (Account_Number) VALUES ((SELECT Account_Number FROM Account WHERE User_Id = 7900));
+INSERT INTO Personal_Account (Account_Number, Id, Name, Date_of_Birth, Email) 
+VALUES 
+((SELECT Account_Number FROM Account WHERE User_Id = 7900), 
+(SELECT Id FROM UserTable WHERE Id = 7900),
+(SELECT Name FROM UserTable where Id = 7900),
+(SELECT Date_of_Birth FROM UserTable WHERE Id = 7900),
+(SELECT Email FROM UserTable WHERE Id = 7900));
+
 INSERT INTO Page (Account_Number, Page_Name, Number_of_Visits) VALUES ((SELECT Account_Number FROM Personal_Account WHERE Account_Number = (SELECT Account_Number FROM Account WHERE User_Id = 7900)), 'SarahPage', 103);
 
 
@@ -119,7 +130,14 @@ pages, 'First' 'Second', and 'Third'. When looking at his 'First' visits, he rec
 SQL:
 INSERT INTO UserTable (Id, Name, Date_of_Birth, Email) VALUES (3000, 'StevePersonal', '1993-03-13', 'steve8@gmail.com');
 INSERT INTO Account (User_Id, Account_Type) VALUES (3000, 'Personal');
-INSERT INTO Personal_Account (Account_Number) VALUES ((SELECT Account_Number FROM Account WHERE User_Id = 3000));
+INSERT INTO Personal_Account (Account_Number, Id, Name, Date_of_Birth, Email) 
+VALUES 
+((SELECT Account_Number FROM Account WHERE User_Id = 3000), 
+(SELECT Id FROM UserTable WHERE Id = 3000),
+(SELECT Name FROM UserTable where Id = 3000),
+(SELECT Date_of_Birth FROM UserTable WHERE Id = 3000),
+(SELECT Email FROM UserTable WHERE Id = 3000));
+
 INSERT INTO Page (Account_Number, Page_Name, Number_of_Visits) 
 VALUES 
 ((SELECT Account_Number FROM Personal_Account WHERE Account_Number = (SELECT Account_Number FROM Account WHERE User_Id = 3000)), 'First', 200),
